@@ -562,6 +562,7 @@ display: flex;
 }
 
 .works-list-item{
+  /* position: relative; */
   width: 370px;
   }
 
@@ -588,6 +589,43 @@ border-left: 2px solid #EEE;
   margin-right: auto;
 }
 
-.works-list{
+.works-list {
   padding-bottom: 94px;
 }
+
+.owerlay {
+position: absolute;
+top: 0;
+width: 370px;
+height: 294px;
+background-color: rgba(33, 150, 243, 0.9);
+
+opacity: 0;
+}
+
+.sub {
+font-size: 18px;
+line-height: 1.56;
+
+color: var(--title-white-color);
+padding: 63px 24px;
+}
+
+.tehnokryak {
+position: relative;
+}
+
+.tehnokryak:hover .owerlay,
+.tehnokryak:focus .owerlay{
+opacity: 1;
+}
+
+/* .tehnokryak::before {
+position: absolute;
+display: block;
+content: "";
+z-index: 5;
+width: 100%;
+height: 294px;
+color: (rgba(33, 150, 243, 0.9));
+} */
