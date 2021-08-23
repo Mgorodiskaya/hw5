@@ -112,6 +112,8 @@ margin-right: 52px;
 
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
  .navigation-list-link:hover,
@@ -138,6 +140,7 @@ margin-right: 52px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--text-color);
+  transition: color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 
 }
 
@@ -150,6 +153,8 @@ margin-right: 52px;
 .header-icon-mail, .header-icon-tel{
   fill: var(--text-color);
   margin-right: 10px;
+
+  transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .header-adress-link:hover .header-icon-mail,
@@ -168,17 +173,20 @@ margin-right: 52px;
   bottom: 0;
   transform: translateY(1.33px);
   z-index: 5;
+  display: block;
 
-  display: none;
   content: "";
   width: 100%;
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-color);
+
+  opacity: 0;
+  transition: opacity cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .navigation-list-link:hover::after {
-display: block;
+opacity: 1;;
 }
 
 .hero {
@@ -363,10 +371,14 @@ justify-content: space-between;
   height: 44px;
   border-radius: 50%;
   background-color: white;
+
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+  cubic-bezier(0.4, 0, 0.2, 1)
   }
 
 .social-icon{
     fill: #AFB1B8;
+    transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .social-link:hover,
@@ -392,10 +404,13 @@ justify-content: space-between;
   height: 92px;
   border: 1px solid #757575;
   border-radius: 4px;
+
+  transition: border-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .clients-icon{
   fill: #AFB1B8;
+  transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .clients-link:hover, .clients-link:focus{
@@ -473,10 +488,13 @@ display: flex;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   margin-right: 10px;
+
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
   }
 
 .footer-social-icon {
     fill: var(--title-white-color);
+    transition: fill cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .footer-social-link:hover,
@@ -516,6 +534,8 @@ display: flex;
   border-radius: 4px;
 
   padding: 6px 22px;
+
+  transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 250ms, color cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
 .btn-filter-list-item:not(:last-child){
@@ -598,17 +618,13 @@ position: absolute;
 top: 0;
 width: 100%;
 height: 100%;
-background-color: rgba(33, 150, 243, 0.9);
-
-opacity: 0;
-}
-
-.sub {
 font-size: 18px;
 line-height: 1.56;
-
+background-color: rgba(33, 150, 243, 0.9);
 color: var(--title-white-color);
-margin: 63px 24px;
+padding: 63px 24px;
+
+opacity: 0;
 }
 
 .tehnokryak {
@@ -620,12 +636,3 @@ position: relative;
 opacity: 1;
 }
 
-/* .tehnokryak::before {
-position: absolute;
-display: block;
-content: "";
-z-index: 5;
-width: 100%;
-height: 294px;
-color: (rgba(33, 150, 243, 0.9));
-} */
