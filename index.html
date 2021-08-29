@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
@@ -49,12 +49,12 @@
         <section class="hero">
             <div class="container"> 
                 <h1 class="hero-title title">Эффективные решения<br>для вашего бизнеса</h1>
-                <button class="hero-btn">Заказать услугу</button>
+                <button class="hero-btn" data-modal-open>Заказать услугу</button>
             </div>
         </section>
-        <div class="backdrop is-hidden">
-            <div class="modal">
-                <button class="close-modal">
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal" >
+                <button class="close-modal" data-modal-close>
                     <svg width=11px height=11px class="btn-close-modal">
                          <use href="./images/sprite.svg#hrest"></use>
                     </svg>
@@ -71,7 +71,7 @@
                             <use href="./images/sprite.svg#group"></use>
                           </svg>
                         </div>
-                        <h3 class="properties-item-title title">ВНИМАНИЕ К ДЕТАЛЯМ</h3>
+                        <h3 class="properties-item-title title">внимание к деталям</h3>
                         <p class="properties-item-text">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                     </li>
                     <li class="properties-list-item punctuality">
@@ -80,7 +80,7 @@
                                 <use href="./images/sprite.svg#clock"></use>
                             </svg>
                           </div>                      
-                        <h3 class="properties-item-title title">ПУНКТУАЛЬНОСТЬ</h3>
+                        <h3 class="properties-item-title title">пунктуальность</h3>
                         <p class="properties-item-text">Задача организации, в особености же рамки и место обучения кадров влечет за собой.</p>
                     </li>
                     <li class="properties-list-item planning">
@@ -89,7 +89,7 @@
                                 <use href="./images/sprite.svg#diagram"></use>
                             </svg>
                         </div>
-                        <h3 class="properties-item-title title">ПЛАНИРОВАНИЕ</h3>
+                        <h3 class="properties-item-title title">планирование</h3>
                         <p class="properties-item-text">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
                     </li>
                     <li class="properties-list-item modernity">
@@ -98,7 +98,7 @@
                                 <use href="./images/sprite.svg#astronaut"></use>
                             </svg>
                         </div>
-                        <h3 class="properties-item-title title">СОВРЕМЕННІЕ ТЕХНОЛОГИИ</h3>
+                        <h3 class="properties-item-title title">современные технологии</h3>
                         <p class="properties-item-text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                     </li>
                 </ul>
@@ -390,5 +390,6 @@
             </div>
         </div>
     </footer>
+ <script src="./js/modal.js"></script>
 </body>
 </html>
